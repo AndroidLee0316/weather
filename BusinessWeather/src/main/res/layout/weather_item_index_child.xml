@@ -1,0 +1,38 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/index_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/weather_index_cold"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/weather_icon_text_padding_normal"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/weather_primary_text"
+        android:textSize="@dimen/weather_desc_text_size"
+        app:layout_constraintLeft_toRightOf="@id/index_icon" />
+
+    <TextView
+        android:id="@+id/index_brf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:textColor="@color/weather_explain_text"
+        android:textSize="@dimen/weather_explain_text_size"
+        app:layout_constraintLeft_toLeftOf="@id/index"
+        app:layout_constraintTop_toBottomOf="@id/index" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.pasc.lib.widget.toolbar.PascToolbar
+        android:id="@+id/ctv_title"
+        style="@style/PascToolbarBase"
+        android:background="@color/weather_ui_background"
+        app:enable_under_divider="true"
+        app:support_translucent_status_bar="false"
+        app:title="@string/weather_title"
+        app:title_text_color="@color/weather_title"
+        app:under_divider_color="@color/weather_divider"
+        />
+
+    <com.pasc.lib.widget.viewcontainer.ViewContainer
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/weather_ui_background"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/weather_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.pasc.business.weather.view.WeatherRecyclerView
+                android:id="@+id/weather_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+    </com.pasc.lib.widget.viewcontainer.ViewContainer>
+
+</LinearLayout>

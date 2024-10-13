@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="268dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="15dp"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <com.pasc.business.weather.view.WeatherSevenDayView
+        android:id="@+id/weather_seven_day_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/weather_horizontal_margin"
+        android:paddingRight="@dimen/weather_horizontal_margin" />
+</HorizontalScrollView>

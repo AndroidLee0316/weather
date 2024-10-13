@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.example.weatherdemo"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = [] // disable automatic ndk-build
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.pasc.lib') {
+            if (requested.name.startsWith("statistics")) {
+                details.useVersion "${rootProject.ext.aarVersionLibStatistics}"
+            }
+        }
+    }
+}
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support:appcompat-v7:27.0.3'
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+
+//    if (isMavenBuild == 'false') {
+        api project(':BusinessWeather')
+//    } else {
+//        api "com.pasc.business:weather:${rootProject.ext.aarVersionBusinessWeather}"
+//    }
+
+    api 'com.github.AndroidLee0316:Log:Log_1.0.1'
+}

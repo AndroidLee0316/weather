@@ -1,0 +1,28 @@
+<resources>
+    <string name="weather_title">天气</string>
+    <string name="weather_unknow">未知</string>
+    <string name="weather_city" translatable="false">市</string>
+    <string name="weather_county" translatable="false">县</string>
+    <string name="weather_area" translatable="false">区</string>
+    <string name="weather_network_unavailable">当前网络不佳，请稍后重试</string>
+    <string name="weather_location_failed">定位失败</string>
+    <string name="weather_location_loading">正在定位...</string>
+    <string name="weather_24_hour">24小时预报</string>
+    <string name="weather_seven_day">天预报</string>
+    <string name="weather_indexoflife">生活指数</string>
+    <string name="weather_other">其他指数</string>
+    <string name="weather_now">现在</string>
+    <string name="weather_no_weather_info_tip">暂无天气信息，请稍后重试</string>
+    <string name="weather_aqi_index">空气质量指数</string>
+    <string name="weather_current_location">当前定位：</string>
+    <string name="weather_pm10">PM10</string>
+    <string name="weather_pm25">PM2.5</string>
+    <string name="weather_no2">二氧化氮</string>
+    <string name="weather_so2">二氧化硫</string>
+    <string name="weather_co">一氧化碳</string>
+    <string name="weather_o3">臭氧</string>
+    <string name="restart_location">重新定位</string>
+    <string name="current_location">当前定位</string>
+    <string name="selection_area">选择区域</string>
+
+</resources>

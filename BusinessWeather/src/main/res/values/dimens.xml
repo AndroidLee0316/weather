@@ -1,0 +1,17 @@
+<resources>
+    <dimen name="weather_explain_text_size">12dp</dimen>
+    <dimen name="weather_desc_text_size">13dp</dimen>
+    <dimen name="weather_content_text_size">15dp</dimen>
+    <dimen name="weather_city_tip_size">14dp</dimen>
+
+    <dimen name="weather_horizontal_margin">@dimen/pasc_list_item_horizontal_margin</dimen>
+    <dimen name="weather_close_icon_margin">15dp</dimen>
+    <dimen name="weather_item_title_top">25dp</dimen>
+    <dimen name="weather_item_title_bottom">14dp</dimen>
+    <dimen name="weather_icon_text_padding_small">4dp</dimen>
+    <dimen name="weather_icon_text_padding_normal">8dp</dimen>
+    <dimen name="weather_list_item_bottom">20dp</dimen>
+    <dimen name="weather_line_divider">0.5dp</dimen>
+    <dimen name="weather_aqi_recycler_margin">30dp</dimen>
+
+</resources>

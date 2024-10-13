@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/weather_ui_background"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/location_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/weather_horizontal_margin"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/current_location"
+            android:textColor="@color/weather_explain_text"
+            android:textSize="@dimen/weather_city_tip_size" />
+
+        <ProgressBar
+            android:id="@+id/location_progress"
+            style="@style/weather_location_loading_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/restart_location"
+            android:layout_alignTop="@+id/restart_location"
+            android:layout_alignLeft="@+id/location_tip"
+            android:layout_marginRight="@dimen/weather_icon_text_padding_normal" />
+
+        <TextView
+            android:id="@+id/location_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/restart_location"
+            android:layout_alignTop="@+id/restart_location"
+            android:layout_toRightOf="@id/location_progress"
+            android:text="@string/weather_location_loading"
+            android:textColor="@color/weather_explain_text"
+            android:textSize="@dimen/weather_content_text_size" />
+
+        <TextView
+            android:id="@+id/location_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/restart_location"
+            android:layout_alignTop="@+id/restart_location"
+            android:layout_alignLeft="@+id/location_tip"
+            android:text="@string/weather_location_failed"
+            android:textColor="@color/weather_explain_text"
+            android:textSize="@dimen/weather_content_text_size" />
+
+        <TextView
+            android:id="@+id/location_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_tip"
+            android:layout_marginLeft="@dimen/weather_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/weather_city_item_bg_normal"
+            android:singleLine="true"
+            android:maxEms="10"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/weather_content_text_size" />
+
+        <TextView
+            android:id="@+id/restart_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/location_tip"
+            android:layout_marginRight="@dimen/weather_horizontal_margin"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/weather_retry_location_icon"
+            android:drawablePadding="2dp"
+            android:text="@string/restart_location"
+            android:textColor="@color/weather_theme_primary"
+            android:textSize="@dimen/weather_content_text_size" />
+
+        <TextView
+            android:id="@+id/city_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/restart_location"
+            android:layout_marginLeft="@dimen/weather_horizontal_margin"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            android:text="@string/selection_area"
+            android:textColor="@color/weather_explain_text"
+            android:textSize="@dimen/weather_city_tip_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/city_list_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/city_tip"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="4dp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/weather_cover_bg"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="weather_location_loading_style" parent="android:Widget.ProgressBar.Inverse">
+        <item name="android:indeterminateDrawable">@drawable/weather_location_loading</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">800</item>
+        <item name="android:minWidth">16dip</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+        <item name="android:maxWidth">16dip</item>
+    </style>
+</resources>

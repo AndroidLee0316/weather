@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="weather_forecast_line">#27a5f9</color>
+    <color name="weather_theme_primary">@color/pasc_primary</color>
+    <color name="weather_explain_text">@color/pasc_explain_text</color>
+    <color name="weather_primary_text">#333333</color>
+    <color name="weather_secondary_text">#666666</color>
+    <color name="weather_city_text_selected">#ffffff</color>
+    <color name="weather_city_text_normal">#999999</color>
+    <color name="weather_city_normal_bg">#f4f4f4</color>
+</resources>

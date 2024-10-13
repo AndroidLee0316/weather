@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/weather_primary_text"
+        android:textSize="@dimen/weather_content_text_size" />
+
+
+    <TextView
+        android:id="@+id/index_brf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/weather_explain_text"
+        android:textSize="@dimen/weather_explain_text_size" />
+</LinearLayout>

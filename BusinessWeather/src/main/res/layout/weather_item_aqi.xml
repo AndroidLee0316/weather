@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="@dimen/weather_aqi_recycler_margin"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/aqi_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/weather_primary_text"
+        android:textSize="21dp" />
+
+
+    <TextView
+        android:id="@+id/aqi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxEms="6"
+        android:singleLine="true"
+        android:textColor="@color/weather_explain_text"
+        android:textSize="@dimen/weather_content_text_size" />
+</LinearLayout>

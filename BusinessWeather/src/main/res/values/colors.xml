@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="weather_live_text">#ffffff</color>
+    <color name="weather_ui_background">#ffffff</color>
+    <color name="weather_title">#000000</color>
+    <color name="weather_item_title">#6a6a6a</color>
+    <color name="weather_aqi_bt_bg">#1a000000</color>
+    <color name="weather_cover_bg">#66000000</color>
+    <color name="weather_divider">#e8e8e8</color>
+    <color name="weather_aqi_level1">#ff6bd445</color>
+    <color name="weather_aqi_level2">#fffaab2d</color>
+    <color name="weather_aqi_level3">#fffa5e46</color>
+</resources>

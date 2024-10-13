@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.pasc.business.weather.view.MarqueeView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/city_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weather_city_item_bg_normal"
+    android:textColor="@color/weather_explain_text"
+    android:layout_margin="6dp"
+    android:singleLine="true"
+    android:gravity="center"
+    android:ellipsize="marquee"
+    android:textSize="@dimen/weather_content_text_size" />

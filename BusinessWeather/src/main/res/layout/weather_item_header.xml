@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/weather_bg_qing">
+
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/weather_live_text"
+        android:textSize="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/temp_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°"
+        android:textColor="@color/weather_live_text"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/currentTemp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:id="@+id/weather_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/weather_live_text"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/currentTemp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <TextView
+        android:id="@+id/feel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:textColor="@color/weather_live_text"
+        android:textSize="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/weather_state"
+        app:layout_constraintLeft_toRightOf="@id/weather_state" />
+
+
+    <TextView
+        android:id="@+id/temp_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/weather_temp_down_icon"
+        android:drawablePadding="@dimen/weather_icon_text_padding_small"
+        android:textColor="@color/weather_live_text"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/currentTemp"
+        app:layout_constraintTop_toBottomOf="@id/weather_state" />
+
+    <TextView
+        android:id="@+id/temp_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/weather_temp_up_icon"
+        android:drawablePadding="@dimen/weather_icon_text_padding_small"
+        android:textColor="@color/weather_live_text"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/temp_down"
+        app:layout_constraintLeft_toRightOf="@id/temp_down" />
+
+    <RelativeLayout
+        android:id="@+id/aqi_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/weather_aqi_layout_bg"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        app:layout_constraintBottom_toBottomOf="@id/temp_down"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weather_state">
+
+        <TextView
+            android:id="@+id/aqi_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/weather_air_qulity_green_ic"
+            android:drawablePadding="@dimen/weather_icon_text_padding_normal"
+            android:textColor="@color/weather_live_text"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/aqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/aqi_value"
+            android:textColor="@color/weather_live_text"
+            android:textSize="@dimen/weather_content_text_size" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
